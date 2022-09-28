@@ -1,0 +1,18 @@
+const Person = require('../models/Person')
+
+class NewsController{
+    show(req,res){
+        Person.find({}, function(err, persons){
+            if (!err) {
+                res.json(persons);
+            } else{
+                // res.status(400).json({error: 'ERR'});
+                console.log(`Error: ${!err}`);
+            }
+            
+        });
+        // res.send("News Page")
+    }
+}
+
+module.exports = new NewsController

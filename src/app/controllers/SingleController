@@ -1,0 +1,8 @@
+class SingleController{
+    
+    show(req,res){
+        res.render("home")
+    }
+}
+
+module.exports = new SingleController
